@@ -1,0 +1,36 @@
+.btn-dark{
+    background: #FFA500;
+    background: -moz-linear-gradient(-45deg, #343a40 0%, #667584 50%, #4e5256 51%, #242a30 71%, #343a40 100%);
+    background: -webkit-linear-gradient(-45deg, #343a40 0%,#667584 50%,#4e5256 51%,#242a30 71%,#343a40 100%);
+    background: linear-gradient(135deg, #343a40 0%,#667584 50%,#4e5256 51%,#242a30 71%,#343a40 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#343a40', endColorstr='#343a40',GradientType=1 );
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 3s ease infinite;
+    -moz-animation: AnimationName 3s ease infinite;
+    animation: AnimationName 3s ease infinite;
+    -webkit-animation: AnimationName 3s ease infinite;
+    -moz-animation: AnimationName 3s ease infinite;
+    animation: AnimationName 3s ease infinite;
+    border: medium none;
+    padding: 8px 25px;
+    font-size: 18px;
+    border-radius: 20px;
+    
+}
+.home {
+    background-image: url(../images/heroshot.jpg);
+    padding: 300px;
+    background-size: cover;
+}
+.p {
+    font-family:  Broadway;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: bold;
+    -webkit-text-fill-color: #6b6060e5;
+    -webkit-text-stroke-width: 2px;
+    color: #0c0c0cd3;
+    
+    
+
+}
