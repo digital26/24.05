@@ -1,19 +1,37 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-//middlewares
-const {authCheck, adminCheck} = require('../middlewares/auth');
+// middlewares
+const { authCheck, adminCheck } = require("../middlewares/auth");
 
-//controller
+// controller
 const {
-    create,
-    listAll
-        } = require("../controllers/product");
+  create,
+  listAll,
+  remove,
+  read,
+  update,
+  list,
+  productsCount,
+  productStar,
+  listRelated,
+  searchFilters,
+} = require("../controllers/product");
 
-router.post("/product", authCheck, adminCheck, create );
-router.get("/products/:count", listAll); //products/100
+// routes
+router.post("/product", authCheck, adminCheck, create);
+router.get("/products/total", productsCount);
 
+router.get("/products/:count", listAll); // products/100
+router.delete("/product/:slug", authCheck, adminCheck, remove);
+router.get("/product/:slug", read);
+router.put("/product/:slug", authCheck, adminCheck, update);
+
+router.post("/products", list);
+// rating
+router.put("/product/star/:productId", authCheck, productStar);
+// related
+router.get("/product/related/:productId", listRelated);
+router.post("/search/filters", searchFilters)
 
 module.exports = router;
-
-

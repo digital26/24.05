@@ -5,9 +5,9 @@ const router = express.Router();
 const { authCheck, adminCheck } = require("../middlewares/auth");
 
 //contollers
-const {upload, remove} = require("..//controllers/cloudinary");
+const {upload, remove} = require("../controllers/cloudinary");
 
-router.post('/uploadImages', authCheck, adminCheck, upload);
-router.post('/removeImages', authCheck, adminCheck, remove);
+router.post('/uploadimages', authCheck, adminCheck, upload);
+router.post('/removeimage', authCheck, adminCheck, remove);
 
 module.exports = router;

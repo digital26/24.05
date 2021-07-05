@@ -18,14 +18,17 @@
     "react-image-file-resizer": "^0.4.4",
     "react-images-upload-remove": "^1.1.2",
     "react-redux": "^7.2.2",
+    "react-responsive-carousel": "^3.2.18",
     "react-router-dom": "^5.2.0",
     "react-script": "^2.0.5",
     "react-scripts": "^4.0.3",
+    "react-star-ratings": "^2.3.0",
     "react-toastify": "^7.0.3",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.9",
     "slugify": "^1.5.0",
     "start": "^5.1.0",
+    "typewriter-effect": "^2.17.0",
     "web-vitals": "^1.1.0"
   },
   "scripts": {

@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import {Menu} from "antd";
-import {  AppstoreOutlined, SettingOutlined, UserAddOutlined, UserOutlined, LogoutOutlined, } from '@ant-design/icons';
+import {  AppstoreOutlined, SettingOutlined, UserAddOutlined, UserOutlined, LogoutOutlined, ShoppingOutlined} from '@ant-design/icons';
 import {Link} from"react-router-dom";
 import firebase from "firebase";
 import {useDispatch, useSelector} from "react-redux";
 import{useHistory} from "react-router-dom";
-import "./header.css"
+import Search from '../forms/Search';
 
 const { SubMenu, Item } = Menu;
 
@@ -33,9 +33,13 @@ const Header = () => {
   
 return (
   
-    <Menu  className="menu menu-dark bg-secondary" onClick={handleClick} theme="dark" mode="horizontal">
+    <Menu  className="menu menu-dark bg-white" onClick={handleClick} mode="horizontal">
       <Item key="home" icon={<AppstoreOutlined />}>
        <Link to="/">Home</Link>
+      </Item>
+
+      <Item key="shop" icon={<ShoppingOutlined />}>
+       <Link to="/shop">Shop</Link>
       </Item>
 
       {!user && (
@@ -74,6 +78,10 @@ return (
        
       </SubMenu>
       }
+
+      <span className="float-right p-1">
+        <Search/>
+      </span>
     </Menu>
     
     );

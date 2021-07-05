@@ -1,8 +1,8 @@
 const cloudinary = require("cloudinary");
 
-CLOUDINARY_CLOUD_NAME="djnht6rsi",
+/*CLOUDINARY_CLOUD_NAME="djnht6rsi",
 CLOUDINARY_API_KEY="475561858669826",
-CLOUDINARY_API_SECRET="VabBJsijkvqtf2JuIk7GVrSD9ps"
+CLOUDINARY_API_SECRET="VabBJsijkvqtf2JuIk7GVrSD9ps"*/
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -21,8 +21,8 @@ exports.upload = async (req,res) => {
     })
 };
 
-exports.remove = async (req,res) => {
-    let image_id = req.body.public_id
+exports.remove =  (req,res) => {
+    let image_id = req.body.public_id;
 
     cloudinary.uploader.destroy(image_id, (err, result) => {
         if(err) return res.json({success: false, err});
